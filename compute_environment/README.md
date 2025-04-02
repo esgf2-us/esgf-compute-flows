@@ -10,7 +10,7 @@ The following has been tested on a local machine (MacOS):
 ```bash
 # Clone ESGF repo to access the environment file
 git clone https://github.com/ESGF2-US/esgf-compute-flows
-cd esgf-compute-flows
+cd esgf-compute-flows/compute_environment
 
 # Create the virtual environment (tested with Python 3.12.4)
 conda env create -f environment.yml
@@ -47,6 +47,11 @@ Create an endpoint using the `esgf_wps_local_config.yaml` config file. Make sure
 ```bash
 globus-compute-endpoint configure --endpoint-config endpoint_configs/YOUR-TARGER-CONFIE-FILE.yaml esgf_wps
 globus-compute-endpoint start esgf_wps
+```
+
+To check your compute endpoint uuids, execute the following command:
+```bash
+globus-compute-endpoint list
 ```
 
 ## Test Framework
