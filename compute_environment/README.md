@@ -10,7 +10,7 @@ The following has been tested on a local machine (MacOS):
 ```bash
 # Clone ESGF repo to access the environment file
 git clone https://github.com/ESGF2-US/esgf-compute-flows
-cd esgf-compute-flows/compute_environment
+cd esgf-compute-flows
 
 # Create the virtual environment (tested with Python 3.12.4)
 conda env create -f environment.yml
@@ -33,6 +33,11 @@ rm $YOUR_SELECTED_FILE
 ```
 
 ## Globus Compute Function
+
+Make sure you are in the `esgf-compute-flows/compute_environment` folder:
+```bash
+cd compute_environment
+```
 
 Register the ESGF WPS function.
 ```bash
