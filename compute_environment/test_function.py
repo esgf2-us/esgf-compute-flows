@@ -28,7 +28,7 @@ data = {
     "member_id":["r1i1p1f1"],
     "table_id":["Amon"],
     "institution_id":["MIROC"],
-    "odir":"/Users/mgrover/git_repos/esgf-crocus-globus-flows/data"
+    "odir":odir
 }
 
 # Start the task
