@@ -1,0 +1,14 @@
+amqp_port: 443
+display_name: ESGF-WPS-local
+engine:
+  max_workers_per_node: 1
+  provider:
+    init_blocks: 1
+    max_blocks: 1
+    min_blocks: 0
+    type: LocalProvider
+    worker_init: |
+      conda activate esgf-compute-flows
+  type: GlobusComputeEngine
+allowed_functions:
+  - 73546874-24d6-43ae-a843-e56592d6f0e5

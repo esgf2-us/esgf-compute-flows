@@ -1,0 +1,22 @@
+name: esgf-compute-flows-dev
+channels:
+  - conda-forge
+dependencies:
+  - python<3.12
+  - numpy
+  - scipy
+  - intake-esgf
+  - xarray
+  - matplotlib
+  - netcdf4
+  - jupyterlab
+  - numpy
+  - python-dotenv
+  - rooki
+  - pip
+  - pip:
+    - globus-compute-common
+    - globus-compute-endpoint>=3.0
+    - globus-compute-sdk>=3.0
+    - globus-identity-mapping
+    - globus-sdk
