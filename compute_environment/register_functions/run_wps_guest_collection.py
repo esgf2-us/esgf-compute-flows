@@ -58,14 +58,19 @@ def average_subset_by_time(node="DKRZ",
     
     average_frequency: str
         options: "year", "month", "day"
-    
+
+    # [Edited from original run_wps.py] -- removed "odir" since it is set automatically
+
     """
     import os
-    import uuid
+    import uuid # [Edited from original run_wps.py]
     from rooki import operators as ops
     from rooki import rooki
     import intake_esgf
     from intake_esgf import ESGFCatalog
+
+    # =======================================
+    # Below [Edited from original run_wps.py]
 
     # Create a UUID for the compute request
     REQUEST_ID = str(uuid.uuid4())
@@ -77,6 +82,11 @@ def average_subset_by_time(node="DKRZ",
     # Assign the output folder and create the folder within the Guest Collection
     odir = os.path.join(GUEST_COLLECTION_BASE_PATH, REQUEST_ID)
     os.mkdir(odir)
+
+    # TODO: If we can have the user's identity, we could set permissions on the guest collection's "odir" folder
+
+    # Above [Edited from original run_wps.py]
+    # =======================================
     
     if node == "ORNL":
         intake_esgf.conf.set(indices={"anl-dev": False,
@@ -132,6 +142,9 @@ def average_subset_by_time(node="DKRZ",
     
     # Apply the id building
     rooki_ids = cat.df.id.apply(build_rooki_id)
+    
+    # =======================================
+    # Below [Edited from original run_wps.py] - Now returning the URL to recover results with Globus
     
     # Create URL link to point users to their results through the Globus webapp
     results_url = ""
