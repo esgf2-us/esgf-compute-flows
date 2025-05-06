@@ -146,6 +146,10 @@ def average_subset_by_time_gc(node="DKRZ",
     # Apply the id building
     rooki_ids = cat.df.id.apply(build_rooki_id)
     
+    dset_dict = {}
+    for rooki_id in rooki_ids:
+        dset_dict[rooki_id] = run_workflow(variable_id[0], rooki_id)
+    
     # =======================================
     # Below [Edited from original run_wps.py] - Now returning the URL to recover results with Globus
 
