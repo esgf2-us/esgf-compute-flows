@@ -77,8 +77,8 @@ def average_subset_by_time_gc(node="DKRZ",
     REQUEST_ID = str(uuid.uuid4())
 
     # Details of the Guest Collection from where results will be shared with users
-    GUEST_COLLECTION_ID = "9e5cf346-9d81-4d96-9eaa-9f07f8370478"
-    GUEST_COLLECTION_BASE_PATH = "/eagle/projects/PortalDevelopment/esgf_collection_dev"
+    GUEST_COLLECTION_ID = "<your_globus_guest_collection_uuid>"
+    GUEST_COLLECTION_BASE_PATH = "</your/full_path/to_the_base_of/the_collection/on_the_filesystem>"
     
     # Assign the output folder and create the folder within the Guest Collection
     odir = os.path.join(GUEST_COLLECTION_BASE_PATH, REQUEST_ID)
