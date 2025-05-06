@@ -28,6 +28,7 @@ def average_subset_by_time_gc(node="DKRZ",
                            member_id=["r1i1p1f1"],
                            table_id=["Amon"],
                            institution_id=["MIROC"],
+                           odir=None
                            ):
     """
     Parameters
@@ -59,7 +60,9 @@ def average_subset_by_time_gc(node="DKRZ",
     average_frequency: str
         options: "year", "month", "day"
 
-    # [Edited from original run_wps.py] -- removed "odir" since it is set automatically
+    # [Edited from original run_wps.py] -- "odir" will be ignored
+    odir: str
+        path to the desired output directory
 
     """
     import os
