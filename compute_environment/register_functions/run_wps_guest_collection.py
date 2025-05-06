@@ -60,9 +60,7 @@ def average_subset_by_time_gc(node="DKRZ",
     average_frequency: str
         options: "year", "month", "day"
 
-    # [Edited from original run_wps.py] -- "odir" will be ignored
-    odir: str
-        path to the desired output directory
+    # [Edited from original run_wps.py] -- "odir" is automatically set within the Guest Collection
 
     """
     import os
@@ -145,7 +143,7 @@ def average_subset_by_time_gc(node="DKRZ",
     
     # Apply the id building
     rooki_ids = cat.df.id.apply(build_rooki_id)
-    
+
     dset_dict = {}
     for rooki_id in rooki_ids:
         dset_dict[rooki_id] = run_workflow(variable_id[0], rooki_id)
