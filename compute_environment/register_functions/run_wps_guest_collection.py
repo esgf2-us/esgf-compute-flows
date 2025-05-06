@@ -15,7 +15,7 @@ Note:
 # Import Globus Compute SDK
 import globus_compute_sdk
 
-def average_subset_by_time(node="DKRZ",
+def average_subset_by_time_gc(node="DKRZ",
                            start_date="1990-01-01",
                            end_date="2000-01-01",
                            lat_min=0,
@@ -145,7 +145,7 @@ def average_subset_by_time(node="DKRZ",
     
     # =======================================
     # Below [Edited from original run_wps.py] - Now returning the URL to recover results with Globus
-    
+
     # Create URL link to point users to their results through the Globus webapp
     results_url = ""
     results_url += "https://app.globus.org/file-manager?"
@@ -161,10 +161,10 @@ def average_subset_by_time(node="DKRZ",
 gcc = globus_compute_sdk.Client()
 
 # Register the function
-COMPUTE_FUNCTION_ID = gcc.register_function(average_subset_by_time)
+COMPUTE_FUNCTION_ID = gcc.register_function(average_subset_by_time_gc)
 
 # Write function UUID in a file
-uuid_file_name = "average_subset_by_time.txt"
+uuid_file_name = "average_subset_by_time_gc.txt"
 with open(uuid_file_name, "w") as file:
     file.write(COMPUTE_FUNCTION_ID)
     file.write("\n")
