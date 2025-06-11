@@ -8,7 +8,7 @@ engine:
     min_blocks: 0
     type: LocalProvider
     worker_init: |
-      conda activate esgf-compute-flows
+      conda activate esgf-compute-flows-dev
   type: GlobusComputeEngine
 allowed_functions:
-  - 73546874-24d6-43ae-a843-e56592d6f0e5
+  - <add-your-function-uuid-here>
